@@ -23,19 +23,6 @@
             <a href="products.html">Products</a>
             <a href="contact.html">Contact</a>
             </div>
-            
-    <input autocomplete="off" name='search' type="text" placeholder="Search for products.." title="Search" />
-<ul id="myUL">
-  <li><a href="#">A</a></li>
-  <li><a href="#">A</a></li>
-  <li><a href="#">A</a></li>
-  <li><a href="#">A</a></li>
-  <li><a href="#">A</a></li>
-  <li><a href="#">A</a></li>
-  <li><a href="#">A</a></li>
-</ul>
-            
-            
           </div>
         
     </body>
@@ -47,10 +34,7 @@
             width: 50px;
             height: 50px;
         }
-.search-container {
-    position: absolute;
-    right: 2px;
-        }
+
         
 .topnav {
   background-color: rgb(17, 0, 255);
@@ -95,68 +79,7 @@
   box-sizing: border-box;
 }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
 
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-#myUL li{
-  display:none;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-.bold{font-weight:bold;
     </style>
 </html>
-<script>
-    function myFunction(e) {
-  // find all `li` > a elements
-  let col=document.querySelectorAll('ul#myUL li a');
-      // iterate through all elements; re-hide & remove className from each.
-      col.forEach(n=>{
-      
-        n.parentNode.style.display='none';
-        n.classList.remove('bold');
-        
-        // if the typed value matches the beginning of a list item; display the text & assign Bold className
-        if( this.value.length > 0 && this.value.trim()!='' && n.textContent.toLowerCase().startsWith( this.value.toLowerCase() ) ){
-        
-          n.parentNode.style.display='block';
-          // make the whole word bold
-          //n.classList.add('bold');
-          
-          // make the matched portion bold
-          n.innerHTML = `<span class="bold">${this.value}</span>` + n.textContent.substr(this.value.length)
-        }
-      });
-}
 
-
-
-document.querySelector('input[name="search"]').addEventListener('keyup',myFunction);
-</script>
