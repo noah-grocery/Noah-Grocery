@@ -34,11 +34,11 @@
 loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const username = document.getElementById('email').value;
+  const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  // Retrieve the stored username and password
-  const storedUsername = localStorage.getItem('email');
+  // Retrieve the stored email and password
+  const storedemail = localStorage.getItem('email');
   const storedPassword = localStorage.getItem('password');
 
   if (email === storedemail && password === storedPassword) {
