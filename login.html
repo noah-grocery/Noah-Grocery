@@ -26,7 +26,7 @@
     .logo {
       width: 100px;
       height: 100px;
-               }
+       }
   </style>
   <script>
     const loginForm = document.getElementById('login-form');
@@ -38,10 +38,10 @@ loginForm.addEventListener('submit', (event) => {
   const password = document.getElementById('password').value;
 
   // Retrieve the stored email and password
-  const storedemail = localStorage.getItem('email');
+  const storedEmail = localStorage.getItem('email');
   const storedPassword = localStorage.getItem('password');
 
-  if (email === storedemail && password === storedPassword) {
+  if (email === storedEmail && password === storedPassword) {
     // Login successful
     alert('Login successful!');
   } else {
