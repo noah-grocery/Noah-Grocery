@@ -9,9 +9,39 @@
     <center>
       <img src="Noah Grocery Logo(4).png" class="logo">
     </center>
+    <form id="login-form">
+  <label for="email">Email:</label><br>
+  <input type="text" id="email" name="email"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="Log In">
+</form> 
+
   </body>
   <style>
     .logo {
-      width: 50px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
   </style>
+  <script>
+    const loginForm = document.getElementById('login-form');
+
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const username = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Retrieve the stored username and password
+  const storedUsername = localStorage.getItem('email');
+  const storedPassword = localStorage.getItem('password');
+
+  if (email === storedemail && password === storedPassword) {
+    // Login successful
+    alert('Login successful!');
+  } else {
+    // Login failed
+    alert('Invalid email or password');
+  }
+});
+  </script>
