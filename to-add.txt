@@ -1,2 +1,4 @@
 Make Login and Signup functions
 Creat cart.html page
+Make login page logo small (75x75px)
+Try username instead of email. (get it from chatpgt)
