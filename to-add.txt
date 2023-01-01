@@ -1,3 +1,2 @@
-Add profile and cart icons to all pages
 Make Login and Signup functions
 Creat cart.html page
