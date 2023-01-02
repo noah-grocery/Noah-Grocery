@@ -11,25 +11,24 @@
     
     <form id="login-form">
   <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email"><br>
+  <input type="email" id="email" name="email"><br>
   <label for="password">Password:</label><br>
   <input type="password" id="password" name="password"><br><br>
   <input type="submit" value="Log In">
-</form>
-      <a href="signup.html>
-        Create your Noah Grocery account
-         </a>
+</form> 
+
+     
     </center>
 
   </body>
   <style>
     .logo {
-      width: 100px;
-      height: 100px;
+      width: 75px;
+      height: 75px;
        }
   </style>
   <script>
-    const loginForm = document.getElementById('login-form');
+   const loginForm = document.getElementById('login-form');
 
 loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -49,4 +48,5 @@ loginForm.addEventListener('submit', (event) => {
     alert('Invalid email or password');
   }
 });
+
   </script>
