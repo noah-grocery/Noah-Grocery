@@ -8,12 +8,15 @@ Signup for a Noah Grocery account
 <body>
 <center>
 <form id="signup-form">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
   <label for="email">Email:</label><br>
-  <input type="text" id="email" name="email"><br>
+  <input type="email" id="email" name="email"><br>
   <label for="password">Password:</label><br>
   <input type="password" id="password" name="password"><br><br>
   <input type="submit" value="Sign Up">
-</form>
+</form> 
+
 
 </center>
 </body>
@@ -23,14 +26,17 @@ const signupForm = document.getElementById('signup-form');
 signupForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
+  const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  // Store the email and password in local storage
+  // Store the name, email, and password in local storage
+  localStorage.setItem('name', name);
   localStorage.setItem('email', email);
   localStorage.setItem('password', password);
 
   // Redirect to the login page
   window.location.href = '/login.html';
 });
+
 </script>
