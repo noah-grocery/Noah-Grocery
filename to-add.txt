@@ -1,3 +1,4 @@
 Style the Signup and Login Form fields
 Creat cart.html page
 Set Favicon image
+Change search bar in product page colors to Noah Grocery Blue
