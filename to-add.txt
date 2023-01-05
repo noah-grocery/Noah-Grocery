@@ -1,2 +1,2 @@
 Style the Signup and Login Form fields
-Make submission success page (contact-success.html)
+Finish contact-success.html page. Add message.
