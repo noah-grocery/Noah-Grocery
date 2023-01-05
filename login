@@ -5,10 +5,29 @@
       Login to Noah Grocery
     </title>
               <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
-              <link rel="stylesheet" href="login.css">
+              <link rel="stylesheet" href="css/login.css">
+              <script src="login.js"></script>
+
 
   </head>
   <body>
+  <div class="topnav">
+         <a href="htps://noahgrocery.ml">
+            <img src="Noah Grocery Logo(4).png" class="logo">
+        </a>
+            
+            <div class="b">
+            <a class="active" href="https://noahgrocery.ml">Home</a>
+            <a href="products>Products</a>
+            <a href="contact">Contact</a>
+            </div>
+            <a href="login">
+                <img src="profile.png" class="profile">
+            </a>
+            <a href="cart">
+                <img src="cart.png" class="cart-image">
+            </a>
+          </div>
     <center>
       <img src="Noah Grocery Logo(4).png" class="logo">
     
@@ -24,32 +43,5 @@
     </center>
 
   </body>
-  <style>
-    .logo {
-      width: 75px;
-      height: 75px;
-       }
-  </style>
-  <script>
-   const loginForm = document.getElementById('login-form');
-
-loginForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-
-  // Retrieve the stored email and password
-  const storedEmail = localStorage.getItem('email');
-  const storedPassword = localStorage.getItem('password');
-
-  if (email === storedEmail && password === storedPassword) {
-    // Login successful
-    alert('Login successful!');
-  } else {
-    // Login failed
-    alert('Invalid email or password');
-  }
-});
-
-  </script>
+ 
+  </html>
