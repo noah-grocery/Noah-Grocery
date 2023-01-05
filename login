@@ -6,7 +6,7 @@
     </title>
               <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
               <link rel="stylesheet" href="css/login.css">
-              <script src="login.js"></script>
+              <script src="javascript/login.js"></script>
 
 
   </head>
