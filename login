@@ -5,6 +5,7 @@
       Login to Noah Grocery
     </title>
               <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
+              <link rel="stylesheet" href="login.css">
 
   </head>
   <body>
