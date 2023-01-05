@@ -12,12 +12,12 @@
             </head>
             <body>
                 <div class="topnav">
-                  <a href="index">
+                  <a href="https://noahgrocery.ml">
                     <img src="Noah Grocery Logo(4).png" class="logo">
                     </a>
                    
                     <div class="b">
-                    <a href="index">Home</a>
+                    <a href="https://noahgrocery.ml">Home</a>
                     <a href="products">Products</a>
                     <a class="active" href="contact">Contact</a>
                     </div>
