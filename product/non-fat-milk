@@ -7,7 +7,6 @@
             Non Fat Milk | Noah Grocery
         </title>
           <link rel="icon" type="image/x-icon" href="/Noah Grocery Minimal Logo.png">
-          <link rel="stylesheet" href="css/non-fat-milk.css">
 
 
     </head>
@@ -21,13 +20,13 @@
             
             <div class="b">
             <a href="https://noahgrocery.ml">Home</a>
-            <a href="/products">Products</a>
-            <a href="/contact">Contact</a>
+            <a href="/products.html">Products</a>
+            <a href="/contact.html">Contact</a>
             </div>
-            <a href="/login">
+            <a href="/login.html">
                 <img src="/profile.png" class="profile">
             </a>
-            <a href="/cart">
+            <a href="/cart.html">
                 <img src="/cart.png" class="cart-image">
             </a>
           </div>
