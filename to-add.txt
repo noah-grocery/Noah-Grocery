@@ -1,3 +1,2 @@
 Style the Signup and Login Form fields
 Finish contact-success.html page. Add message.
-Rename all pages(and the links) to just the name(no .html) Ex: noahgrocery.ml/index (instead of noahgrocery.ml/index.html)
