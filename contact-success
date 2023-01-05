@@ -7,6 +7,7 @@
             Noah Grocery
         </title>
           <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
+<link rel="stylesheet" href="contact-success.css">
 
 
     </head>
@@ -14,19 +15,19 @@
       
         
         <div class="topnav">
-         <a href="index.html">
+         <a href="https://noahgrocery.ml">
             <img src="Noah Grocery Logo(4).png" class="logo">
         </a>
             
             <div class="b">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
+            <a href="https://noahgrocery.ml">Home</a>
+            <a href="products">Products</a>
+            <a href="contact">Contact</a>
             </div>
-            <a href="login.html">
+            <a href="login">
                 <img src="profile.png" class="profile">
             </a>
-            <a href="cart.html">
+            <a href="cart">
                 <img src="cart.png" class="cart-image">
             </a>
           </div>
