@@ -3,4 +3,3 @@ Style the Signup and Login Form fields
 Finish contact-success.html page. Add message.
 Add the Navbar to the login and signup pages. 
 ----------------------NOTES----------------------
-Big mess up. New code should be in. Check. If it is not working, you know why.
