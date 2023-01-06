@@ -37,6 +37,7 @@ Don't have an account?<a href="signup.html">Create one</a>
   <input type="email" id="email" name="email" required><br>
   <label for="password">Password:</label><br>
   <input type="password" id="password" name="password" required><br><br>
+  <input type="checkbox" onclick="myFunction()">Show Password
   <input type="submit" value="Log In">
 </form> 
 
@@ -119,5 +120,13 @@ loginForm.addEventListener('submit', (event) => {
     alert('Invalid email or password');
   }
 });
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
 
   </script>

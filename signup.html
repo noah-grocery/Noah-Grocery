@@ -40,6 +40,7 @@ Signup for a Noah Grocery account
   <input type="email" id="email" name="email" required><br>
   <label for="password">Password:</label><br>
   <input type="password" id="password" name="password" required><br><br>
+  <input type="checkbox" onclick="myFunction()">Show Password
   <input type="submit" value="Sign Up">
 </form> 
 
@@ -118,5 +119,13 @@ signupForm.addEventListener('submit', (event) => {
   // Redirect to the login page
   window.location.href = '/login.html';
 });
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
 
 </script>
