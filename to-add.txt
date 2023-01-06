@@ -2,4 +2,5 @@
 Style the Signup and Login Form fields
 Finish contact-success.html page. Add message.
 Add the Navbar to the login and signup pages. 
+Add CSS files to CSS folder and transfer css to corresponding file.
 ----------------------NOTES----------------------
