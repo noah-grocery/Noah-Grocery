@@ -172,6 +172,20 @@ function myFunction() {
     x.type = "password";
   }
 }
+const inputs = document.querySelectorAll('input');
+
+inputs.forEach((input) => {
+  input.addEventListener('invalid', (event) => {
+    event.preventDefault();
+
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = 'This field is required';
+    errorMessage.style.color = 'red';
+
+    input.parentNode.insertBefore(errorMessage, input.nextSibling);
+  });
+});
+
 
 
 </script>
