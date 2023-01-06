@@ -33,13 +33,14 @@
 Don't have an account?<a href="signup.html"> Create one</a>
     </p>
     <form id="login-form">
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" required><br><br>
-  <input type="checkbox" onclick="myFunction()">Show Password<br>
-  <input type="submit" value="Log In">
-</form> 
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required>
+      <button id="show-hide-button">Show</button><br><br>
+      <input type="submit" value="Log In">
+    </form> 
+     
 
     </center>
 
@@ -166,27 +167,42 @@ loginForm.addEventListener('submit', (event) => {
     alert('Invalid email or password');
   }
 });
-function myFunction() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
+const showHideButton = document.getElementById('show-hide-button');
+
+showHideButton.addEventListener('click', (event) => {
+  const passwordInput = document.getElementById('password');
+
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    showHideButton.textContent = 'Hide';
   } else {
-    x.type = "password";
+    passwordInput.type = 'password';
+    showHideButton.textContent = 'Show';
   }
-}
+});
+
 const inputs = document.querySelectorAll('input');
 
 inputs.forEach((input) => {
   input.addEventListener('invalid', (event) => {
     event.preventDefault();
 
+    // Remove any existing error messages
+    const errorMessages = document.querySelectorAll('p.error-message');
+    errorMessages.forEach((errorMessage) => {
+      errorMessage.remove();
+    });
+
+    // Add a new error message
     const errorMessage = document.createElement('p');
     errorMessage.textContent = 'This field is required';
     errorMessage.style.color = 'red';
+    errorMessage.classList.add('error-message');
 
     input.parentNode.insertBefore(errorMessage, input.nextSibling);
   });
 });
+
 
 
   </script>
