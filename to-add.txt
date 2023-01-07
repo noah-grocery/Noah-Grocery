@@ -2,7 +2,6 @@
 Style the Signup and Login Form fields
 Finish contact-success.html page. Add message.
 Add CSS files to CSS folder and transfer css to corresponding file.
-Add Create a Noah Grocery account link to bottom of login and login to bottom on signup.
-Make it so all signup and login fields are required. Right now, it just does it after you enter text.
+Make it so the signup form prohibits duplicate emails from being signed up
 ----------------------NOTES----------------------
-Make the show/hide button background visible
+
