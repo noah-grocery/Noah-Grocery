@@ -157,43 +157,6 @@ color:#007db3;
      
   </style>
 <script>
-  const form = document.querySelector('form');
-
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const inputs = form.querySelectorAll('input');
-  let isValid = true;
-
-  inputs.forEach((input) => {
-    if (input.checkValidity() === false) {
-      isValid = false;
-    }
-  });
-
-  if (isValid) {
-    const email = form.querySelector('input[type="email"]').value;
-
-    // Check if the email is already in use
-    const existingAccount = accounts.find((account) => account.email === email);
-    if (existingAccount) {
-      alert('This email is already in use. Please use a different email or log in to your existing account.');
-    } else {
-      // Add the new account to the accounts array
-      const newAccount = {
-        name: form.querySelector('input[type="text"]').value,
-        email: email,
-        password: form.querySelector('input[type="password"]').value
-      };
-      accounts.push(newAccount);
-
-      alert('Account created successfully!');
-    }
-  } else {
-    alert('Please fill out all required fields and enter a valid email address.');
-  }
-});
-
 const signupForm = document.getElementById('signup-form');
 
 signupForm.addEventListener('submit', (event) => {
