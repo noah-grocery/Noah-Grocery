@@ -36,12 +36,12 @@ Signup for a Noah Grocery account
 <a href="login.html">Already have an account?</a>
 </p>
 <form id="signup-form">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" required>
+  
+  <input type="text" id="name" name="name" required placeholder="Name"><br>
+  
+  <input type="email" id="email" name="email" required placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+  
+  <input type="password" id="password" name="password" required placeholder="Password">
   <button id="show-hide-button">Show</button><br><br>
   <input type="submit" value="Sign Up">
 </form> 
@@ -66,11 +66,7 @@ Signup for a Noah Grocery account
   border-radius: 5px;
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 16px;
-}
+
 
 input[type="text"],
 input[type="email"],
