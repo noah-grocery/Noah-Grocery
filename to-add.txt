@@ -1,6 +1,5 @@
 ----------------------To-Add----------------------
-Style the Signup and Login Form fields
-Finish contact-success.html page. Add message.
+Finish styling the Signup and Login Form fields
 Add CSS files to CSS folder and transfer css to corresponding file.
 Make it so the signup form prohibits duplicate emails from being signed up
 ----------------------NOTES----------------------
