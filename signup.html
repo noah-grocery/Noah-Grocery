@@ -1,222 +1,232 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-Signup for a Noah Grocery account
-</title>
-                <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
+  <title>
+    Signup for a Noah Grocery account
+  </title>
+  <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
 
 </head>
+
 <body>
   <div class="topnav">
-         <a href="index.html">
-            <img src="Noah Grocery Logo(4).png" class="logo">
-        </a>
-            
-            <div class="b">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            </div>
-            <a href="login.html">
-                <img src="profile.png" class="profile">
-            </a>
-            <a href="cart.html">
-                <img src="cart.png" class="cart-image">
-            </a>
-          </div>
-<center>
-  <h3 class="signup">
-    Sign up for an account
-  </h3>
-<p>
-  You can use this account to log in at Noah Grocery.<br>
-<a href="login.html">Already have an account?</a>
-</p>
-<form id="signup-form">
-  
-  <input type="text" id="name" name="name" required placeholder="Name"><br>
-  
-  <input type="email" id="email" name="email" required placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
-  
-  <input type="password" id="password" name="password" required placeholder="Password">
-  <button id="show-hide-button">Show</button><br><br>
-  <input type="submit" value="Sign Up">
-</form> 
+    <a href="index.html">
+      <img src="Noah Grocery Logo(4).png" class="logo">
+    </a>
+
+    <div class="b">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="login.html">
+      <img src="profile.png" class="profile">
+    </a>
+    <a href="cart.html">
+      <img src="cart.png" class="cart-image">
+    </a>
+  </div>
+  <center>
+    <h3 class="signup">
+      Sign up for an account
+    </h3>
+    <p>
+      You can use this account to log in at Noah Grocery.<br>
+      <a href="login.html">Already have an account?</a>
+    </p>
+    <form id="signup-form">
+
+      <input type="text" id="name" name="name" required placeholder="Name"><br>
+
+      <input type="email" id="email" name="email" required placeholder="Email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+
+      <input type="password" id="password" name="password" required placeholder="Password">
+      <button id="show-hide-button">Show</button><br><br>
+      <input type="submit" value="Sign Up">
+    </form>
 
 
 
 
 
 
-</center>
+  </center>
 </body>
-  <style>
-    .signup {
-      color:#414142;
-    }
-    form {
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-#show-hide-button {
-  display: inline-block;
-  width: 80px;
-  text-align: center;
-  padding: 10px 0;
-  border: none;
-  background: transparent;
-  color: #666;
-  cursor: pointer;
-}
-
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border
-}
-
-input[type="submit"] {
-  width: 100%;
-  background-color: #414142;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  border-radius: 23px;
-}
-
-input[type="submit"]:hover {
-  background-color: #2e2e2e;
-}
-
-     .logo {
-      width: 75px;
-      height: 75px;
-       }
-       a:link, a:visited, a:hover, a:active {
-text-decoration: none;
-color:#007db3;
-      }
-    
-    
-      .cart-image {
-            position: absolute;
-            right: 20px;
-            top: 50px;
-            width: 50px;
-            height: 50px;
-        }
-        .profile {
-            position: absolute;
-            right:100px;
-            top: 50px;
-            width: 50px;
-            height: 50px;
-        }
-
-        
-.topnav {
-  background-color: rgb(17, 0, 255);
-  overflow: hidden;
-
-}
-    .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-
-.b a:hover {
-  background-color: #ddd;
-  color: rgb(0, 0, 0);
-}
-
-
-.topnav a.active {
-  background-color: #000000;
-  color: white;
-}
-     
-  </style>
-<script>
-const signupForm = document.getElementById('signup-form');
-
-signupForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-
-  // Store the name, email, and password in local storage
-  localStorage.setItem('name', name);
-  localStorage.setItem('email', email);
-  localStorage.setItem('password', password);
-
-  // Redirect to the login page
-  window.location.href = '/login.html';
-});
-const showHideButton = document.getElementById('show-hide-button');
-
-showHideButton.addEventListener('click', (event) => {
-  const passwordInput = document.getElementById('password');
-
-  if (passwordInput.type === 'password') {
-    passwordInput.type = 'text';
-    showHideButton.textContent = 'Hide';
-  } else {
-    passwordInput.type = 'password';
-    showHideButton.textContent = 'Show';
+<style>
+  .signup {
+    color: #414142;
   }
-});
 
-const inputs = document.querySelectorAll('input');
+  form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
 
-inputs.forEach((input) => {
-  input.addEventListener('invalid', (event) => {
+  #show-hide-button {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    padding: 10px 0;
+    border: none;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+  }
+
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    background-color: #414142;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 23px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #2e2e2e;
+  }
+
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: #007db3;
+  }
+
+
+  .cart-image {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile {
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .topnav {
+    background-color: rgb(17, 0, 255);
+    overflow: hidden;
+
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+
+  .b a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+  }
+
+
+  .topnav a.active {
+    background-color: #000000;
+    color: white;
+  }
+</style>
+<script>
+  const signupForm = document.getElementById('signup-form');
+
+  signupForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    // Remove any existing error messages
-    const errorMessages = document.querySelectorAll('p.error-message');
-    errorMessages.forEach((errorMessage) => {
-      errorMessage.remove();
-    });
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-    // Add a new error message
-    let errorMessage;
-    if (input.type === 'email') {
-      errorMessage = document.createElement('p');
-      errorMessage.textContent = 'Please enter a valid email address';
-      errorMessage.style.color = 'red';
-      errorMessage.classList.add('error-message');
-    } else {
-      errorMessage = document.createElement('p');
-      errorMessage.textContent = 'This field is required';
-      errorMessage.style.color = 'red';
-      errorMessage.classList.add('error-message');
-    }
+    // Store the name, email, and password in local storage
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
 
-    input.parentNode.insertBefore(errorMessage, input.nextSibling);
+    // Redirect to the login page
+    window.location.href = '/login.html';
   });
-});
+  const showHideButton = document.getElementById('show-hide-button');
+
+  showHideButton.addEventListener('click', (event) => {
+    const passwordInput = document.getElementById('password');
+
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      showHideButton.textContent = 'Hide';
+    } else {
+      passwordInput.type = 'password';
+      showHideButton.textContent = 'Show';
+    }
+  });
+
+  const inputs = document.querySelectorAll('input');
+
+  inputs.forEach((input) => {
+    input.addEventListener('invalid', (event) => {
+      event.preventDefault();
+
+      // Remove any existing error messages
+      const errorMessages = document.querySelectorAll('p.error-message');
+      errorMessages.forEach((errorMessage) => {
+        errorMessage.remove();
+      });
+
+      // Add a new error message
+      let errorMessage;
+      if (input.type === 'email') {
+        errorMessage = document.createElement('p');
+        errorMessage.textContent = 'Please enter a valid email address';
+        errorMessage.style.color = 'red';
+        errorMessage.classList.add('error-message');
+      } else {
+        errorMessage = document.createElement('p');
+        errorMessage.textContent = 'This field is required';
+        errorMessage.style.color = 'red';
+        errorMessage.classList.add('error-message');
+      }
+
+      input.parentNode.insertBefore(errorMessage, input.nextSibling);
+    });
+  });
 
 
 
