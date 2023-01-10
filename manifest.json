@@ -1,22 +1,15 @@
 {
-    "background_color": "#0000ff",
-    "description": "Noah Grocery App",
-    "dir": "ltr",
-    "display": "standalone",
-    "name": "Noah Grocery",
-    "orientation": "any",
-    "scope": "/",
-    "short_name": "Noah Grocery",
-    "start_url": "/noahgrocery.ml",
-    "theme_color": "#0000ff",
-    "categories": [],
-    "screenshots": [],
-    "icons": [
-      {
-        "src": "Noah Grocery Minimal Logo.png",
-        "type": "image/png",
-        "sizes": "96x96"
-      }
-    ],
-    "shortcuts": []
-  }
+  "background_color": "#0000ff",
+  "description": "Noah Grocery App",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "Noah Grocery Logo(4).png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Noah Grocery App",
+  "short_name": "App",
+  "start_url": "index.html"
+}
