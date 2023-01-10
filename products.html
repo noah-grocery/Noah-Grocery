@@ -34,38 +34,25 @@
       <button id="search">Search</button>
     </div>
     <div id="buttons">
-      <div class="content hideContent">
-        <button class="button-value" onclick="filterProduct('all')">All</button>
-        <button class="button-value" onclick="filterProduct('Produce')">Produce</button>
-        <button class="button-value" onclick="filterProduct('Dry Foods')">Dry Foods</button>
 
-
-      </div>
-    </div>
-    <div class="show-more">
-      <a href="#">Show more</a>
+      <button class="button-value" onclick="filterProduct('all')">All</button>
+      <button class="button-value" onclick="filterProduct('Produce')">Produce</button>
+      <button class="button-value" onclick="filterProduct('Dry Foods')">Dry Foods</button>
       <button class="button-value" onclick="filterProduct('Frozen Foods')">Frozen Foods</button>
       <button class="button-value" onclick="filterProduct('Dairy')">Dairy</button>
       <button class="button-value" onclick="filterProduct('Meat')">Meat</button>
       <button class="button-value" onclick="filterProduct('Bakery')">Bakery</button>
+
     </div>
-    <div id="products"></div>
+  </div>
+
+
+  <div id="products"></div>
   </div>
 
 
 </body>
 <style>
-  .hideContent {
-    overflow: hidden;
-    line-height: 1em;
-    height: 2em;
-  }
-
-  .showContent {
-    line-height: 1em;
-    height: auto;
-  }
-
   * {
 
     box-sizing: border-box;
@@ -227,20 +214,9 @@
 
 </html>
 <script>
-  $(".show-more a").on("click", function () {
-    var $this = $(this);
-    var $content = $this.parent().prev("div.content");
-    var linkText = $this.text().toUpperCase();
 
-    if (linkText === "SHOW MORE") {
-      linkText = "Show less";
-      $content.switchClass("hideContent", "showContent", 400);
-    } else {
-      linkText = "Show more";
-      $content.switchClass("showContent", "hideContent", 400);
-    };
 
-    $this.text(linkText);
+  $this.text(linkText);
   });
   let products = {
     data: [
