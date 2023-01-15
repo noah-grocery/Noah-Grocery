@@ -33,40 +33,271 @@
     </a>
   </div>
 
-
-  <div id="featured-products">
-    <div class="product-slider">
-      <div class="product"></div>
-      <div class="product"></div>
-      <div class="product"></div>
+  <section class="product">
+    <h2 class="product-category">Featured Products</h2>
+    <button class="pre-btn">&#62;</button>
+    <button class="nxt-btn">&#62;</button>
+    <div class="product-container">
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <span class="discount-tag">0% off</span>
+          <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand">Coming Soon!</h2>
+          <span class="price">$0</span><span class="actual-price">$0</span>
+        </div>
+      </div>
     </div>
-    <button id="prev-btn">prev</button>
-    <button id="next-btn">next</button>
-  </div>
+  </section>
 
 
 
   <style>
-    #featured-products {
+    .pre-btn,
+    .nxt-btn {
+      border: none;
+      width: 10vw;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+      cursor: pointer;
+      z-index: 8;
+    }
+
+    .pre-btn {
+      left: 0;
+      transform: rotate(180deg);
+    }
+
+    .nxt-btn {
+      right: 0;
+    }
+
+    .pre-btn img,
+    .nxt-btn img {
+      opacity: 0.2;
+    }
+
+    .pre-btn:hover img,
+    .nxt-btn:hover img {
+      opacity: 1;
+    }
+
+    .product-container {
+      padding: 0 10vw;
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+
+    .product-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product-card {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 450px;
+      margin-right: 40px;
+    }
+
+    .product-image {
+      position: relative;
       width: 100%;
+      height: 350px;
       overflow: hidden;
     }
 
-    .product-slider {
-      display: flex;
+    .product-thumb {
       width: 100%;
-      overflow-x: scroll;
+      height: 350px;
+      object-fit: contain;
+    }
+
+    .discount-tag {
+      position: absolute;
+      background: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      color: #ff7d7d;
+      right: 10px;
+      top: 10px;
+      text-transform: capitalize;
+    }
+
+    .card-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      width: 90%;
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      background: #fff;
+      border-radius: 5px;
+      transition: 0.5s;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    .product-card:hover .card-btn {
+      opacity: 1;
+    }
+
+    .card-btn:hover {
+      background: #efefef;
+    }
+
+    .product-info {
+      width: 100%;
+      height: 100px;
+      padding-top: 10px;
+    }
+
+    .product-brand {
+      text-transform: uppercase;
+    }
+
+    .product-short-des {
+      width: 100%;
+      height: 20px;
+      line-height: 20px;
+      overflow: hidden;
+      opacity: 0.5;
+      text-transform: capitalize;
+      margin: 5px 0;
+    }
+
+    .price {
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    .actual-price {
+      margin-left: 20px;
+      opacity: 0.5;
+      text-decoration: line-through;
     }
 
     .product {
-      flex: 0 0 20%;
-      height: 250px;
-      margin-right: 10px;
+      position: relative;
+      overflow: hidden;
+      padding: 20px 0;
     }
 
-    .product img {
-      width: 100%;
-      height: 100%;
+    .product-category {
+      padding: 0 10vw;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 40px;
+      text-transform: capitalize;
     }
 
     .cart-image {
@@ -89,7 +320,6 @@
     .topnav {
       background-color: rgb(17, 0, 255);
       overflow: hidden;
-
     }
 
     .logo {
@@ -127,51 +357,22 @@
 
 </body>
 <script>
-  let products = [
-    { name: "Product 1", price: "$10", percentOff: "20%", img: "product1.jpg" },
-    { name: "Product 2", price: "$20", percentOff: "10%", img: "product2.jpg" },
-    { name: "Product 3", price: "$30", percentOff: "5%", img: "product3.jpg" }
-  ];
+  const productContainers = [...document.querySelectorAll('.product-container')];
+  const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+  const preBtn = [...document.querySelectorAll('.pre-btn')];
 
-  let productSlider = document.querySelector(".product-slider");
-  let prevBtn = document.querySelector("#prev-btn");
-  let nextBtn = document.querySelector("#next-btn");
-  let currentSlide = 0;
+  productContainers.forEach((item, i) => {
+    let containerDimenstions = item.getBoundingClientRect();
+    let containerWidth = containerDimenstions.width;
 
-  for (let i = 0; i < products.length; i++) {
-    let product = products[i];
-    let newProduct = document.createElement("div");
-    newProduct.classList.add("product");
+    nxtBtn[i].addEventListener('click', () => {
+      item.scrollLeft += containerWidth;
+    })
 
-    let productImg = document.createElement("img");
-    productImg.src = product.img;
-    newProduct.appendChild(productImg);
-
-    let productName = document.createElement("p");
-    productName.innerHTML = product.name;
-    newProduct.appendChild(productName);
-
-    let productPrice = document.createElement("p");
-    productPrice.innerHTML = product.price;
-    newProduct.appendChild(productPrice);
-
-    let productDiscount = document.createElement("p");
-    productDiscount.innerHTML = product.percentOff;
-    newProduct.appendChild(productDiscount);
-
-    productSlider.appendChild(newProduct);
-  }
-
-  prevBtn.addEventListener("click", function () {
-    currentSlide--;
-    productSlider.style.transform = `translateX(${currentSlide * -20}%)`;
-  });
-
-  nextBtn.addEventListener("click", function () {
-    currentSlide++;
-    productSlider.style.transform = `translateX(${currentSlide * -20}%)`;
-  });
-
+    preBtn[i].addEventListener('click', () => {
+      item.scrollLeft -= containerWidth;
+    })
+  })
 </script>
 
 </html>

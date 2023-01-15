@@ -2,8 +2,6 @@
 <html>
 
 <head>
-  <nav class="navbar"></nav>
-    <script src="nav.js"></script>
   <title>
     Login to Noah Grocery
   </title>
@@ -13,13 +11,29 @@
 </head>
 
 <body>
-  
+  <div class="topnav">
+    <a href="index.html">
+      <img src="Noah Grocery Logo(4).png" class="logo">
+    </a>
+
+    <div class="b">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="login.html">
+      <img src="profile.png" class="profile">
+    </a>
+    <a href="cart.html">
+      <img src="cart.png" class="cart-image">
+    </a>
+  </div>
   <center>
     <h3 class="login">
       Log in
     </h3>
     <p>
-      Don't have an account?<a href="signup.html" class="b"> Create one</a>
+      Don't have an account?<a href="signup.html"> Create one</a>
     </p>
     <form id="login-form">
 
@@ -39,7 +53,6 @@
 
 </body>
 <style>
-  @import 'nav.css';
   .login {
     color: #414142;
   }
@@ -92,15 +105,64 @@
   }
 
 
- .b {
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
     text-decoration: none;
     color: #007db3;
 
   }
 
 
-  
- 
+  .logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .cart-image {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile {
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .topnav {
+    background-color: rgb(17, 0, 255);
+    overflow: hidden;
+
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+
+  .b a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+  }
+
+
+  .topnav a.active {
+    background-color: #000000;
+    color: white;
+  }
 </style>
 <script>
   const loginForm = document.getElementById('login-form');
