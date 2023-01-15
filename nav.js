@@ -5,7 +5,7 @@ const createNav = () => {
 
     nav.innerHTML = `
         <div class="nav">
-            <img src="Noah Grocery Logo(4).png" class="brand-logo" alt="">
+            <img src="Noah Grocery Logo(4).png" class="brand-logo" alt="Noah Grocery Logo">
             <div class="nav-items">
                 <div class="search">
                     <input type="text" class="search-box" placeholder="search brand, product">
