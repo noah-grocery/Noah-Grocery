@@ -1,377 +1,177 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <nav class="navbar"></nav>
-    <script src="nav.js"></script>
-    <title>
-        Noah Grocery
-    </title>
+<head>
+  <title>
+    Noah Grocery
+  </title>
+  <link rel="icon" type="image/x-icon" href="Noah Grocery Minimal Logo.png">
+
+
 </head>
 
 <body>
-    <section class="product">
-        <h2 class="product-category">Featured Products</h2>
-    </section>
 
-    <button class="pre-btn">&#62;</button>
-    <button class="nxt-btn">&#62;</button>
-    <div class="product-container">
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">0% off</span>
-                <img src="img/card1.png" class="product-thumb" alt="">
 
-            </div>
-            <div class="product-info">
-                <h2 class="product-brand">Coming Soon!</h2>
+  <div class="topnav">
+    <a href="index.html">
+      <img src="Noah Grocery Logo(4).png" class="logo">
+    </a>
 
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">0% off</span>
-                <img src="img/card1.png" class="product-thumb" alt="">
-
-            </div>
-            <div class="product-info">
-                <h2 class="product-brand">Coming Soon!</h2>
-
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">0% off</span>
-                <img src="img/card1.png" class="product-thumb" alt="">
-
-            </div>
-            <div class="product-info">
-                <h2 class="product-brand">Coming Soon!</h2>
-
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">0% off</span>
-                <img src="img/card1.png" class="product-thumb" alt="">
-
-            </div>
-            <div class="product-info">
-                <h2 class="product-brand">Coming Soon!</h2>
-
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">0% off</span>
-                <img src="img/card1.png" class="product-thumb" alt="">
-
-            </div>
-            <div class="product-info">
-                <h2 class="product-brand">Coming Soon!</h2>
-
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">0% off</span>
-                <img src="img/card1.png" class="product-thumb" alt="">
-
-            </div>
-            <div class="product-info">
-                <h2 class="product-brand">Coming Soon!</h2>
-
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <span class="discount-tag">0% off</span>
-                <img src="Noah Grocery Logo(4).png" class="product-thumb" alt="">
-
-            </div>
-            <div class="product-info">
-                <h2 class="product-brand">Coming Soon!</h2>
-
-                <span class="price">$20</span><span class="actual-price">$40</span>
-            </div>
-        </div>
+    <div class="b">
+      <a class="active" href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
     </div>
-</body>
+    <a href="login.html">
+      <img src="profile.png" class="profile">
+    </a>
+    <a href="cart.html">
+      <img src="cart.png" class="cart-image">
+    </a>
+  </div>
 
-<style>
-    @import 'nav.css';
 
-    .pre-btn,
-    .nxt-btn {
-        border: none;
-        width: 10vw;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-        cursor: pointer;
-        z-index: 8;
+  <div id="featured-products">
+    <div class="product-slider">
+      <div class="product"></div>
+      <div class="product"></div>
+      <div class="product"></div>
+    </div>
+    <button id="prev-btn">prev</button>
+    <button id="next-btn">next</button>
+  </div>
+
+
+
+  <style>
+    #featured-products {
+      width: 100%;
+      overflow: hidden;
     }
 
-    .pre-btn {
-        left: 0;
-        transform: rotate(180deg);
-    }
-
-    .nxt-btn {
-        right: 0;
-    }
-
-    .pre-btn img,
-    .nxt-btn img {
-        opacity: 0.2;
-    }
-
-    .pre-btn:hover img,
-    .nxt-btn:hover img {
-        opacity: 1;
-    }
-
-    .product-container {
-        padding: 0 10vw;
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-    }
-
-    .product-container::-webkit-scrollbar {
-        display: none;
-    }
-
-    .product-card {
-        flex: 0 0 auto;
-        width: 250px;
-        height: 450px;
-        margin-right: 40px;
-    }
-
-    .product-image {
-        position: relative;
-        width: 100%;
-        height: 350px;
-        overflow: hidden;
-    }
-
-    .product-thumb {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-    }
-
-    .discount-tag {
-        position: absolute;
-        background: #fff;
-        padding: 5px;
-        border-radius: 5px;
-        color: #ff7d7d;
-        right: 10px;
-        top: 10px;
-        text-transform: capitalize;
-    }
-
-    .card-btn {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 10px;
-        width: 90%;
-        text-transform: capitalize;
-        border: none;
-        outline: none;
-        background: #fff;
-        border-radius: 5px;
-        transition: 0.5s;
-        cursor: pointer;
-        opacity: 0;
-    }
-
-    .product-card:hover .card-btn {
-        opacity: 1;
-    }
-
-    .card-btn:hover {
-        background: #efefef;
-    }
-
-    .product-info {
-        width: 100%;
-        height: 100px;
-        padding-top: 10px;
-    }
-
-    .product-brand {
-        text-transform: uppercase;
-    }
-
-    .product-short-des {
-        width: 100%;
-        height: 20px;
-        line-height: 20px;
-        overflow: hidden;
-        opacity: 0.5;
-        text-transform: capitalize;
-        margin: 5px 0;
-    }
-
-    .price {
-        font-weight: 900;
-        font-size: 20px;
-    }
-
-    .actual-price {
-        margin-left: 20px;
-        opacity: 0.5;
-        text-decoration: line-through;
+    .product-slider {
+      display: flex;
+      width: 100%;
+      overflow-x: scroll;
     }
 
     .product {
-        position: relative;
-        overflow: hidden;
-        padding: 20px 0;
+      flex: 0 0 20%;
+      height: 250px;
+      margin-right: 10px;
     }
 
-    .product-category {
-        padding: 0 10vw;
-        font-size: 30px;
-        font-weight: 500;
-        margin-bottom: 40px;
-        text-transform: capitalize;
+    .product img {
+      width: 100%;
+      height: 100%;
     }
 
-    .links-container {
-        width: 100%;
-        display: flex;
-        padding: 10px 10vw;
-        justify-content: center;
-        list-style: none;
-        border-top: 1px solid #d1d1d1;
+    .cart-image {
+      position: absolute;
+      right: 20px;
+      top: 50px;
+      width: 50px;
+      height: 50px;
     }
 
-    .link {
-        text-transform: capitalize;
-        padding: 0 10px;
-        margin: 0 5px;
-        text-decoration: none;
-        color: #383838;
-        opacity: 0.5;
-        transition: .5s;
+    .profile {
+      position: absolute;
+      right: 100px;
+      top: 50px;
+      width: 50px;
+      height: 50px;
     }
 
-    .link:hover {
-        opacity: 1;
+
+    .topnav {
+      background-color: rgb(17, 0, 255);
+      overflow: hidden;
+
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'roboto', sans-serif;
+    .logo {
+      width: 75px;
+      height: 75px;
+
+
+
+
     }
 
-    .navbar {
-        position: sticky;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: #f5f5f5;
-        z-index: 9;
+
+
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
     }
 
-    .nav {
-        padding: 10px 10vw;
-        display: flex;
-        justify-content: space-between;
+
+    .b a:hover {
+      background-color: #ddd;
+      color: rgb(0, 0, 0);
     }
 
-    .brand-logo {
-        height: 60px;
-    }
 
-    .nav-items {
-        display: flex;
-        align-items: center;
+    .topnav a.active {
+      background-color: #000000;
+      color: white;
     }
+  </style>
 
-    .search {
-        width: 500px;
-        display: flex;
-    }
-
-    .search-box {
-        width: 80%;
-        height: 40px;
-        padding: 10px;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border: 1px solid #d1d1d1;
-        text-transform: capitalize;
-        background: none;
-        color: #a9a9a9;
-        outline: none;
-    }
-
-    .search-btn {
-        width: 20%;
-        height: 40px;
-        padding: 10px 20px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background: #383838;
-        color: #fff;
-        text-transform: capitalize;
-        font-size: 15px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-    }
-
-    .search-box::placeholder {
-        color: #a9a9a9;
-    }
-
-    .nav-items a {
-        margin-left: 20px;
-    }
-
-    .nav-items a img {
-        width: 30px;
-    }
-</style>
+</body>
 <script>
-    const productContainers = [...document.querySelectorAll('.product-container')];
-    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-    const preBtn = [...document.querySelectorAll('.pre-btn')];
+  let products = [
+    { name: "Product 1", price: "$10", percentOff: "20%", img: "product1.jpg" },
+    { name: "Product 2", price: "$20", percentOff: "10%", img: "product2.jpg" },
+    { name: "Product 3", price: "$30", percentOff: "5%", img: "product3.jpg" }
+  ];
 
-    productContainers.forEach((item, i) => {
-        let containerDimenstions = item.getBoundingClientRect();
-        let containerWidth = containerDimenstions.width;
+  let productSlider = document.querySelector(".product-slider");
+  let prevBtn = document.querySelector("#prev-btn");
+  let nextBtn = document.querySelector("#next-btn");
+  let currentSlide = 0;
 
-        nxtBtn[i].addEventListener('click', () => {
-            item.scrollLeft += containerWidth;
-        })
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+    let newProduct = document.createElement("div");
+    newProduct.classList.add("product");
 
-        preBtn[i].addEventListener('click', () => {
-            item.scrollLeft -= containerWidth;
-        })
-    })
+    let productImg = document.createElement("img");
+    productImg.src = product.img;
+    newProduct.appendChild(productImg);
+
+    let productName = document.createElement("p");
+    productName.innerHTML = product.name;
+    newProduct.appendChild(productName);
+
+    let productPrice = document.createElement("p");
+    productPrice.innerHTML = product.price;
+    newProduct.appendChild(productPrice);
+
+    let productDiscount = document.createElement("p");
+    productDiscount.innerHTML = product.percentOff;
+    newProduct.appendChild(productDiscount);
+
+    productSlider.appendChild(newProduct);
+  }
+
+  prevBtn.addEventListener("click", function () {
+    currentSlide--;
+    productSlider.style.transform = `translateX(${currentSlide * -20}%)`;
+  });
+
+  nextBtn.addEventListener("click", function () {
+    currentSlide++;
+    productSlider.style.transform = `translateX(${currentSlide * -20}%)`;
+  });
+
 </script>
 
 </html>
