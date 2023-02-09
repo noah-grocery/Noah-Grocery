@@ -1,7 +1,5 @@
 ----------------------To-Add----------------------
-Finish styling the Signup and Login Form fields
-Add CSS files to CSS folder and transfer css to corresponding file.
-Make it so the signup form prohibits duplicate emails from being signed up
+Add javascript folder with files for each file with javascript.
 Add products
 ----------------------NOTES----------------------
 
