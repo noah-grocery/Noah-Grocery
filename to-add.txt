@@ -1,5 +1,4 @@
 ----------------------To-Add----------------------
-Add javascript folder with files for each file with javascript.
 Add products
 ----------------------NOTES----------------------
 

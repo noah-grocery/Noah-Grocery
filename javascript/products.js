@@ -1,10 +1,10 @@
 let products = {
     data: [
       {
-        productName: "Coming Soon!",
-        category: "Bakery",
-        price: "",
-        image: "Noah Grocery Logo(4).png",
+        productName: "Noah Grocery Non-Fat Milk, 1 gal",
+        category: "Dairy",
+        price: "3.21",
+        image: "product images/non-fat-milk",
       },
       {
         productName: "Coming Soon!",
@@ -70,13 +70,18 @@ let products = {
     //product name
     let name = document.createElement("h5");
     name.classList.add("product-name");
-    name.innerText = i.productName.toUpperCase();
+    name.innerText = i.productName;
     container.appendChild(name);
     //price
     let price = document.createElement("h6");
     price.innerText = "$" + i.price;
     container.appendChild(price);
-
+    //add to cart button
+    let button = document.createElement("button");
+    button.classList.add("button");
+    button.innerText = "Add to cart"
+    container.appendChild(button);
+    
     card.appendChild(container);
     document.getElementById("products").appendChild(card);
   }
@@ -99,7 +104,7 @@ let products = {
     //loop through all cards
     elements.forEach((element) => {
       //display all cards on 'all' button click
-      if (value == "all") {
+      if (value == "All") {
         element.classList.remove("hide");
       } else {
         //Check if element contains category class
@@ -136,5 +141,7 @@ let products = {
 
   //Initially display all products
   window.onload = () => {
-    filterProduct("all");
+    filterProduct("All");
   };
+ 
+ 

@@ -61,8 +61,8 @@
     max-width: 18em;
     margin-top: 1em;
     padding: 1em;
-    border-radius: 5px;
-    box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+    border-radius: 5px;    
+
   }
 
   .image-container {
@@ -78,14 +78,28 @@
   .container {
     padding-top: 1em;
     color: #110f29;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
   }
 
   .container h5 {
     font-weight: 500;
+    font-size: 18px;
+    text-align: center;
   }
 
   .hide {
     display: none;
+  }
+  .button {
+    border-radius: 15px;
+    width: 250px;
+    height: 50px;
+    color: white;
+    background-color: #0000FF;
+    cursor: pointer;
+    font-size: 15px;
   }
 
   @media screen and (max-width: 720px) {
