@@ -45,7 +45,7 @@
       <input type="email" id="email" name="email" required placeholder="Email"><br>
 
       <input type="password" id="password" name="password" required placeholder="Password">
-      <button id="show-hide-button">Show</button><br><br>
+      
       <input type="submit" id="signUp" name="signup_submit" value="Sign Up">
     </form>
 
@@ -59,7 +59,7 @@
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-  import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+  import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
   import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
@@ -88,6 +88,11 @@
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        set(ref(database, "users/" + user.uid),{
+          name: name,
+          email: email,
+
+        });
         alert("user created!");
         // ...
       })
