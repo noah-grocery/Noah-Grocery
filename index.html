@@ -154,7 +154,29 @@
 
 
 
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBYFS0uBGAHAzOESuWLcOx6Ek9AmEFsfy4",
+    authDomain: "noah-grocery-b40a4.firebaseapp.com",
+    projectId: "noah-grocery-b40a4",
+    storageBucket: "noah-grocery-b40a4.appspot.com",
+    messagingSenderId: "769750492360",
+    appId: "1:769750492360:web:bc6c729fceada0eec871fd",
+    measurementId: "G-9WKXNF277F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 <script src="javascript/index.js"></script>
 
