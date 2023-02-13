@@ -42,12 +42,11 @@
 
       <input type="text" id="name" name="name" required placeholder="Name"><br>
 
-      <input type="email" id="email" name="email" required placeholder="Email"
-        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+      <input type="email" id="email" name="email" required placeholder="Email"><br>
 
       <input type="password" id="password" name="password" required placeholder="Password">
       <button id="show-hide-button">Show</button><br><br>
-      <input type="submit" value="Sign Up">
+      <input type="submit" id="signUp" name="signup_submit" value="Sign Up">
     </form>
 
 
@@ -57,5 +56,47 @@
 
   </center>
 </body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+  import { getDatabase } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-<script src="javascript/signup.js"></script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAFo2u30J7VlsAnHBcIYnIHtfZX-vHxmGo",
+    authDomain: "noah-grocery-1d81d.firebaseapp.com",
+    databaseURL: "https://noah-grocery-1d81d-default-rtdb.firebaseio.com/",
+    projectId: "noah-grocery-1d81d",
+    storageBucket: "noah-grocery-1d81d.appspot.com",
+    messagingSenderId: "244719919479",
+    appId: "1:244719919479:web:cd21de4f956b0cc4b80172"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+  signUp.addEventListener('click', (e) => {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var name = document.getElementById("name").value;
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        alert("user created!");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+
+        alert(errorMessage);
+        // ..
+      });
+  });
+</script>
