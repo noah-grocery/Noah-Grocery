@@ -66,21 +66,22 @@
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyAFo2u30J7VlsAnHBcIYnIHtfZX-vHxmGo",
-    authDomain: "noah-grocery-1d81d.firebaseapp.com",
-    databaseURL: "https://noah-grocery-1d81d-default-rtdb.firebaseio.com/",
-    projectId: "noah-grocery-1d81d",
-    storageBucket: "noah-grocery-1d81d.appspot.com",
-    messagingSenderId: "244719919479",
-    appId: "1:244719919479:web:cd21de4f956b0cc4b80172"
-  };
+  apiKey: "AIzaSyAFo2u30J7VlsAnHBcIYnIHtfZX-vHxmGo",
+  authDomain: "noah-grocery-1d81d.firebaseapp.com",
+  databaseURL: "https://noah-grocery-1d81d-default-rtdb.firebaseio.com",
+  projectId: "noah-grocery-1d81d",
+  storageBucket: "noah-grocery-1d81d.appspot.com",
+  messagingSenderId: "244719919479",
+  appId: "1:244719919479:web:cd21de4f956b0cc4b80172"
+};
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
+  import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
   const auth = getAuth();
 
-  signUp.addEventListener('click', (e) => {
+  signUp.addEventListener('click',(e)=> {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     var name = document.getElementById("name").value;
@@ -90,9 +91,9 @@
         const user = userCredential.user;
         set(ref(database, "users/" + user.uid),{
           name: name,
-          email: email,
+          email: email
 
-        });
+        })
         alert("user created!");
         // ...
       })
