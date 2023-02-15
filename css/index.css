@@ -145,3 +145,8 @@
   margin-bottom: 40px;
   text-transform: capitalize;
 }
+.search {
+  border: none;
+  width: 50%;
+  border-radius: 2px;
+}
