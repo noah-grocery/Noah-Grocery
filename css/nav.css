@@ -6,27 +6,18 @@
   height: 50px;
 }
 
-.profile {
-  position: absolute;
-  right: 100px;
-  top: 50px;
-  width: 50px;
-  height: 50px;
-}
+
 
 
 .topnav {
   background-color: rgb(17, 0, 255);
   overflow: hidden;
+  
 }
 
 .logo {
   width: 75px;
   height: 75px;
-
-
-
-
 }
 
 
