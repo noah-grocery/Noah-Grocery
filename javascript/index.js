@@ -14,3 +14,4 @@ const productContainers = [...document.querySelectorAll('.product-container')];
       item.scrollLeft -= containerWidth;
     })
   })
+ 
